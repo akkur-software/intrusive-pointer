@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <TestsPlatform Condition="'$(Platform)'=='Win32'">x86</TestsPlatform>
+    <TestsPlatform Condition="'$(Platform)'=='x86'">x86</TestsPlatform>
+    <TestsPlatform Condition="'$(Platform)'=='x64'">x64</TestsPlatform>
+    <TestsPlatform Condition="'$(TestsPlatform)'==''">$(Platform)</TestsPlatform>
+    
+    <TestsBinaries>$(SolutionDir)intermediate\tests\$(Configuration)\</TestsBinaries>
+    <TestsInterm>$(SolutionDir)intermediate\temp\$(TestsPlatform)\$(Configuration)\</TestsInterm>
+  </PropertyGroup>
+  
+  <PropertyGroup Label="OutputDirectories">    
+    <OutDir>$(TestsBinaries)</OutDir>
+    <IntDir>$(TestsInterm)$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>
+        $(ProjectDir);
+        $(SolutionDir);
+        $(SolutionDir)sources;
+        %(AdditionalIncludeDirectories)
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>
+        $(SolutionDir)binaries\$(Configuration);
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>
+        $(SolutionDir)binaries\$(Configuration);
+        %(AdditionalLibraryDirectories)
+      </AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>  
+  
+</Project>

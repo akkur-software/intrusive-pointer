@@ -1,0 +1,28 @@
+﻿# Folders
+.vs/
+[Xx]64/
+[Xx]86/
+[Ii]nterm*/
+[Bb]in*/
+[Tt]estResult*/
+
+# Precompiled Headers
+*.ipch
+
+# Всякий ненужный мусор:
+*.VC.*
+*.suo
+*.user
+*.exp
+*.aps
+*.TMP
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
