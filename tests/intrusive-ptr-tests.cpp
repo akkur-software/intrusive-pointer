@@ -50,7 +50,7 @@ public:
 
 	TEST_METHOD(MakePtr_Success)
 	{
-		// Arrange && Act
+		// Arrange
 		auto raw_value = 2;
 
 		// Act
@@ -79,7 +79,7 @@ public:
 
 	TEST_METHOD(CopyPtrFromSource_Success)
 	{
-		// Arrange && Act
+		// Arrange
 		auto raw_value = 20;
 		auto src_ptr = make_intrusive<Object>(raw_value);
 
@@ -97,7 +97,7 @@ public:
 
 	TEST_METHOD(MovePtrFromSource_Success)
 	{
-		// Arrange && Act
+		// Arrange
 		auto raw_value = 99;
 		auto src_ptr = make_intrusive<Object>(raw_value);
 
